@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swarm Intelligence — Strategic Presentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body class="show-ui">
+    <div id="presentation-stage">
+
+        <div class="slide active" style="justify-content: center; text-align: center;">
+            <div class="content-area" style="align-items: center;">
+                <h1 class="text-teal">Swarm Intelligence</h1>
+                <p style="font-size: 32px; color: white; max-width: 800px; margin-bottom: 50px;">When Many Simple Minds Outsmart One Genius</p>
+                <div style="height: 2px; width: 100px; background: var(--accent-teal); margin-bottom: 50px;"></div>
+                <p style="font-size: 18px; text-transform: uppercase; letter-spacing: 2px;">Pamela Gendrop Prados<br/>Julio Mata Amaro<br/>Juan Carlos Cervera De Valle<br/><br/><strong>April 29<sup style="font-size: 0.75em;">th</sup>, 2026</strong></p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-title">How Do Thousands of Ants Find the Shortest Path Without a Map?</h2>
+            <div class="content-area">
+                <ul style="font-size: 24px; margin-bottom: 40px;">
+                    <li>No leader giving orders</li>
+                    <li>No GPS, no blueprint</li>
+                    <li>Yet they consistently solve problems that stump engineers</li>
+                </ul>
+                <div class="quote-box">
+                    <p>"The answer isn't in any single ant — it's in how they interact."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-title">What Is Swarm Intelligence?</h2>
+            <div class="content-area">
+                <ul style="margin-bottom: 40px;">
+                    <li>A branch of AI inspired by collective behavior in nature</li>
+                    <li>Studies how decentralized, self-organized systems solve complex problems</li>
+                    <li>Coined by Gerardo Beni & Jing Wang (1989) in the context of robotics</li>
+                </ul>
+                <div class="tile-card" style="border-color: var(--accent-teal);">
+                    <p style="font-size: 26px; color: white; text-align: center;">
+                        <span class="text-teal font-bold">Emergent intelligence</span> from simple agents following simple rules.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-title">The Four Pillars</h2>
+            <div class="content-area">
+                <div class="grid-4">
+                    <div class="icon-tile">
+                        <span class="emoji">🕸️</span>
+                        <h4>Decentralization</h4>
+                        <p>No central controller</p>
+                    </div>
+                    <div class="icon-tile">
+                        <span class="emoji">💬</span>
+                        <h4>Local interaction</h4>
+                        <p>Agents talk only to neighbors</p>
+                    </div>
+                    <div class="icon-tile">
+                        <span class="emoji">⚙️</span>
+                        <h4>Self-organization</h4>
+                        <p>Global patterns emerge from local rules</p>
+                    </div>
+                    <div class="icon-tile">
+                        <span class="emoji">📍</span>
+                        <h4>Stigmergy</h4>
+                        <p>Coordination through environmental cues (e.g., pheromones)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-title">Where We See It in the Wild</h2>
+            <div class="content-area">
+                <div class="grid-4">
+                    <div class="tile-card">
+                        <span class="emoji" style="font-size: 40px; display: block; margin-bottom: 10px;">🐜</span>
+                        <h4 class="highlight" style="margin-bottom: 10px;">Ant colonies</h4>
+                        <p style="font-size: 16px;">Pheromone trails optimize foraging routes</p>
+                    </div>
+                    <div class="tile-card">
+                        <span class="emoji" style="font-size: 40px; display: block; margin-bottom: 10px;">🐝</span>
+                        <h4 class="highlight" style="margin-bottom: 10px;">Bee swarms</h4>
+                        <p style="font-size: 16px;">Collective decision-making for new hive locations</p>
+                    </div>
+                    <div class="tile-card">
+                        <span class="emoji" style="font-size: 40px; display: block; margin-bottom: 10px;">🐦</span>
+                        <h4 class="highlight" style="margin-bottom: 10px;">Bird flocks</h4>
+                        <p style="font-size: 16px;">Coordinated flight without a leader</p>
+                    </div>
+                    <div class="tile-card">
+                        <span class="emoji" style="font-size: 40px; display: block; margin-bottom: 10px;">🐟</span>
+                        <h4 class="highlight" style="margin-bottom: 10px;">Fish schools</h4>
+                        <p style="font-size: 16px;">Predator evasion through synchronized movement</p>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 40px; font-style: italic; color: var(--accent-teal);">
+                    Caption: None of these animals "know" they're solving optimization problems.
+                </p>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-title">The Fish School</h2>
+            <div class="content-area">
+                <div class="two-column">
+                    <div>
+                        <p style="margin-bottom: 15px;">A school of sardines facing a shark moves like a single giant organism — turning, splitting, regrouping in perfect sync.</p>
+                        <p style="margin-bottom: 15px;" class="highlight">But no fish has a master plan.</p>
+                        <p style="margin-bottom: 15px;">Each one follows just three simple rules, watching only its 6–7 nearest neighbors:</p>
+                        
+                        <div class="controls-overlay">
+                            <button class="action-btn active" onclick="toggleBoidRule('sep', this)">Separation — don't crowd your neighbors</button>
+                            <button class="action-btn active" onclick="toggleBoidRule('ali', this)">Alignment — swim in the same average direction</button>
+                            <button class="action-btn active" onclick="toggleBoidRule('coh', this)">Cohesion — stay close to the group</button>
+                        </div>
+                        <p style="margin-top: 20px; font-style: italic; font-size: 16px;" class="text-teal">Takeaway: The intelligence doesn't live in any fish. It lives in the relationships between them.</p>
+                    </div>
+                    <div class="sim-panel">
+                        <canvas id="boidsCanvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-title">Key Algorithms (Part 1): Ant Colony Optimization (ACO)</h2>
+            <div class="content-area">
+                <div class="two-column">
+                    <div class="sim-panel" style="display: flex; flex-direction: column;">
+                        <canvas id="acoCanvas" style="height: calc(100% - 60px);"></canvas>
+                        <div style="padding: 10px; text-align: center;">
+                            <button class="action-btn active" style="text-align: center;" onclick="resetACO()">Restart Simulation</button>
+                        </div>
+                    </div>
+                    <div>
+                        <ul>
+                            <li>Inspired by ants laying pheromone trails</li>
+                            <li>Shorter paths get reinforced; longer paths fade</li>
+                        </ul>
+                        <div class="tile-card" style="margin-top: 30px;">
+                            <h4 class="highlight" style="margin-bottom: 10px;">Used for:</h4>
+                            <p>Vehicle routing, network packet routing, scheduling.</p>
+                        </div>
+                        <p style="margin-top: 20px; font-size: 14px; font-style: italic;">Visual: Diagram of ants finding the shortest path between nest and food.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-title">Key Algorithms (Part 2): Particle Swarm Optimization (PSO)</h2>
+            <div class="content-area">
+                <div class="two-column">
+                    <div>
+                        <p style="margin-bottom: 15px;">Inspired by bird flocking and fish schooling.</p>
+                        <p style="margin-bottom: 15px;">Each "particle" adjusts its position based on:</p>
+                        <ul>
+                            <li>Its own best experience</li>
+                            <li>The swarm's best experience</li>
+                        </ul>
+                        <div class="tile-card" style="margin-top: 30px;">
+                            <h4 class="highlight" style="margin-bottom: 10px;">Used for:</h4>
+                            <p>Neural network training, hyperparameter tuning, engineering design.</p>
+                        </div>
+                        <button class="action-btn active" style="margin-top: 20px; text-align: center;" onclick="scatterPSO()">Scatter Particles</button>
+                        <p style="margin-top: 20px; font-size: 14px; font-style: italic;">Visual: Particles converging toward an optimum on a 2D surface.</p>
+                    </div>
+                    <div class="sim-panel">
+                        <canvas id="psoCanvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-title">Swarm Intelligence in Action</h2>
+            <div class="content-area">
+                <div class="grid-5">
+                    <div class="icon-tile" style="padding: 20px 15px;">
+                        <span class="emoji">🚁</span>
+                        <h4 class="highlight" style="font-size: 16px;">Drone swarms</h4>
+                        <p style="font-size: 14px;">Light shows, search & rescue, defense</p>
+                    </div>
+                    <div class="icon-tile" style="padding: 20px 15px;">
+                        <span class="emoji">🚚</span>
+                        <h4 class="highlight" style="font-size: 16px;">Logistics</h4>
+                        <p style="font-size: 14px;">Amazon, UPS route optimization</p>
+                    </div>
+                    <div class="icon-tile" style="padding: 20px 15px;">
+                        <span class="emoji">🤖</span>
+                        <h4 class="highlight" style="font-size: 16px;">Warehouse robots</h4>
+                        <p style="font-size: 14px;">Kiva/Amazon Robotics fleets</p>
+                    </div>
+                    <div class="icon-tile" style="padding: 20px 15px;">
+                        <span class="emoji">📡</span>
+                        <h4 class="highlight" style="font-size: 16px;">Telecom networks</h4>
+                        <p style="font-size: 14px;">Adaptive packet routing</p>
+                    </div>
+                    <div class="icon-tile" style="padding: 20px 15px;">
+                        <span class="emoji">💊</span>
+                        <h4 class="highlight" style="font-size: 16px;">Data clustering</h4>
+                        <p style="font-size: 14px;">Drug discovery, market segmentation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-title">Why It Works (and Where It Struggles)</h2>
+            <div class="content-area">
+                <div class="two-column">
+                    <div class="tile-card" style="border-top: 4px solid var(--success); height: 100%;">
+                        <h3 style="color: var(--success); display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-solid fa-check-circle"></i> Strengths
+                        </h3>
+                        <ul style="margin-top: 20px;">
+                            <li>Robust (no single point of failure)</li>
+                            <li>Scalable to thousands of agents</li>
+                            <li>Adapts to changing environments</li>
+                            <li>Simple rules = low computational cost per agent</li>
+                        </ul>
+                    </div>
+                    <div class="tile-card" style="border-top: 4px solid var(--danger); height: 100%;">
+                        <h3 style="color: var(--danger); display: flex; align-items: center; gap: 10px;">
+                            <i class="fa-solid fa-triangle-exclamation"></i> Limitations
+                        </h3>
+                        <ul style="margin-top: 20px;">
+                            <li>Hard to predict emergent behavior</li>
+                            <li>Can converge on suboptimal solutions</li>
+                            <li>Tuning parameters is often trial-and-error</li>
+                            <li>Difficult to debug</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <h2 class="slide-title">The Takeaway</h2>
+            <div class="content-area">
+                <ul style="font-size: 26px; margin-bottom: 40px;">
+                    <li style="font-size: 24px;">Intelligence doesn't always need a "brain"</li>
+                    <li style="font-size: 24px;">Sometimes it lives in the relationships between simple agents</li>
+                    <li style="font-size: 24px;">As AI moves toward distributed systems, swarm intelligence becomes more relevant than ever</li>
+                </ul>
+                <div class="quote-box" style="margin-top: 50px;">
+                    <p>"The fish doesn't know the school is moving. The school doesn't know either. And yet, it moves perfectly."</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="slide" style="text-align: center; justify-content: center;">
+            <div class="content-area" style="align-items: center;">
+                <h1 class="text-teal" style="font-size: 100px;">Thank You</h1>
+                <p style="font-size: 36px; color: white;">Questions?</p>
+            </div>
+        </div>
+
+        <div class="slide" style="text-align: center;">
+            <h2 class="slide-title">Interactive Quiz</h2>
+            <div class="content-area" style="align-items: center; gap: 40px;">
+                <p style="font-size: 24px;">Scan any QR code or use the button below each one.</p>
+
+                <div class="qr-columns">
+                    <div class="qr-item">
+                        <h4>Kahoot Quiz</h4>
+                        <div class="qr-placeholder">
+                            <img src="qr.svg" alt="QR para unirse al quiz de Kahoot">
+                        </div>
+                        <a href="https://create.kahoot.it/share/swarn-intelligence-quiz/aedfa128-25b8-4e0a-8876-269b968c1eed" target="_blank" class="kahoot-link">
+                            Join Kahoot! Quiz
+                        </a>
+                    </div>
+
+                    <div class="qr-item">
+                        <h4>Google Colab</h4>
+                        <div class="qr-placeholder">
+                            <img src="qr 2.svg" alt="QR para abrir el notebook en Google Colab">
+                        </div>
+                        <a href="https://colab.research.google.com/drive/1aBZ5DvVGYcApoHgYqURke7zB6bXncz4k?usp=sharing" target="_blank" class="kahoot-link">
+                            Open in Colab
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <button id="fullscreen-btn" class="ui" onclick="toggleFullscreen()"><i class="fa-solid fa-expand"></i></button>
+
+    <div class="page-counter" id="page-counter"><span>1</span> / 13</div>
+
+    <div class="nav-controls ui">
+        <button class="nav-btn" onclick="prevSlide()"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="nav-btn" onclick="nextSlide()"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+</body>
+</html>
