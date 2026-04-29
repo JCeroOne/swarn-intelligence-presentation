@@ -12,6 +12,13 @@ function updateNavigation() {
     counter.innerHTML = `<span>${currentIdx + 1}</span> / ${slides.length}`;
 }
 
+window.setSlide = id => {
+    if (id < slides.length && id >= 0) {
+        currentIdx = id;
+        updateNavigation();
+    }
+}
+
 window.nextSlide = function() {
     if (currentIdx < slides.length - 1) {
         currentIdx++;
@@ -161,33 +168,42 @@ function initACO() {
     resetACO();
 }
 
+let grid, cellSize = 10, nextFrame;
+let iterations = 0;
+
 window.resetACO = function() {
+    window.cancelAnimationFrame(nextFrame);
     const size = fitCanvas(acoCanvas, aCtx);
-    trail = [];
-    for (let i = 0; i < 400; i += 3) {
-        trail.push({ x: i, y: size.height / 2 + (Math.random() - 0.5) * 180 });
-    }
+    iterations = 0;
+    const gw = Math.ceil(size.width / cellSize), gh = Math.ceil(size.height / cellSize);
+    grid = new Grid(gw, gh);
+    runACO();
 }
 
 function runACO() {
     const size = fitCanvas(acoCanvas, aCtx);
-    aCtx.fillStyle = 'rgba(2, 6, 23, 0.2)';
-    aCtx.fillRect(0,0, size.width, size.height);
-    
-    // Nest and Food
-    aCtx.fillStyle = '#94a3b8'; aCtx.beginPath(); aCtx.arc(50, size.height / 2, 15, 0, Math.PI*2); aCtx.fill();
-    aCtx.fillStyle = '#14b8a6'; aCtx.beginPath(); aCtx.arc(size.width - 50, size.height / 2, 15, 0, Math.PI*2); aCtx.fill();
-
-    if (trail.length > 0) {
-        aCtx.strokeStyle = '#14b8a6'; aCtx.lineWidth = 2; aCtx.beginPath();
-        aCtx.moveTo(trail[0].x + 80, trail[0].y);
-        trail.forEach(t => {
-            t.y += (size.height / 2 - t.y) * 0.005; // Converge
-            aCtx.lineTo(t.x + 80, t.y);
-        });
-        aCtx.stroke();
+    grid.colony.iteration();
+    iterations += 1;
+    const maxPh = grid.max_pheromones;
+    for(let y = 0; y < grid.height; y++){
+        for(let x = 0; x < grid.width; x++){
+            const cell = grid.getCell(x, y);
+            if(cell.type == "food") aCtx.fillStyle = "#0f0";
+            else if(cell.type == "colony") aCtx.fillStyle = "#f00";
+            else if(cell.type == "obstacle") aCtx.fillStyle="#888";
+            else aCtx.fillStyle = `rgb(0, 0, ${Math.pow(cell.pheromones / maxPh, 1.5) * 255})`;
+            aCtx.fillRect(x * cellSize, y * cellSize, cellSize, cellSize);
+        }
     }
-    requestAnimationFrame(runACO);
+    aCtx.fillStyle = "#fff";
+    aCtx.strokeStyle = "#000";
+    aCtx.lineWidth = 3;
+    aCtx.font = "bold 18px Arial";
+    aCtx.textAlign = "start";
+    aCtx.textBaseline = "bottom";
+    aCtx.strokeText(`Iteration ${iterations}`, 10, size.height - 10);
+    aCtx.fillText(`Iteration ${iterations}`, 10, size.height - 10);
+    if(currentIdx == 6 && iterations < 500) nextFrame = window.requestAnimationFrame(runACO);
 }
 
 /**
@@ -242,7 +258,7 @@ function runPSO() {
 // STARTUP
 window.addEventListener('load', () => {
     initBoids(); runBoids();
-    initACO(); runACO();
+    initACO();
     initPSO(); runPSO();
 });
 
@@ -251,3 +267,5 @@ window.addEventListener('resize', () => {
     initACO();
     initPSO();
 });
+
+setSlide(6);
