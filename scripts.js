@@ -270,4 +270,3 @@ window.addEventListener('resize', () => {
     initACO();
     initPSO();
 });
-setSlide(6);
